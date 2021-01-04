@@ -1,3 +1,77 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.boton-fecha {
+	line-height: 20px !important;
+}
+
+.fijo {
+	position: fixed !important;
+	right: 15px;
+	bottom: 15px;
+}
+
+
+
+
+.contenedor {
+  display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.fila {
+  display: flex;
+	flex-direction: row;
+  align-items: center;
+}
+
+.margen {
+	margin-left: 10px;
+}
+
+.titulo {
+	width: 90%;
+	font-weight: bold;
+}
+
+.texto {
+	width: 90%;
+}
+
+.icono {
+	text-align: right;
+	width: 10%;
+}
+
+.col1 {
+	width: 60px;
+}
+
+.col2 {
+	width: 40px;
+}
+				
+.col3 {
+	width: 100%;
+}
+
+.carta {
+	background-color: #F0F3F6;
+	margin: 2px;
+	padding: 5px;
+}
+
+.row{
+	align-items: center;
+}
+
+.timeline {
+	width: 50px;
+	background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}

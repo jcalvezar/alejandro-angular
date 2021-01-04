@@ -7,7 +7,7 @@
       <span>My List</span>
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon2" aria-label="Icono More horiz" (click)="irSchedule();">
-        <mat-icon>more</mat-icon>
+        <mat-icon>more_horiz</mat-icon>
       </button>
     </mat-toolbar-row>
 
@@ -16,7 +16,7 @@
 			<swiper [slidesPerView]="15" [spaceBetween]="10" >
 				<ng-container *ngFor="let fecha of miServicio.fechas; index as i">
 					<ng-template swiperSlide>
-						<button mat-button [color]="fecha.color" (click)="irSchedule();">
+						<button mat-button [color]="fecha.color" (click)="irSchedule();" class="boton-fecha">
 							{{ fecha.nro }}<br />
 							{{ fecha.dia }}
 						</button>

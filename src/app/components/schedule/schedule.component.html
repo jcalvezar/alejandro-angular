@@ -1,25 +1,56 @@
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-			<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-				<mat-icon>menu</mat-icon>
+			<button mat-icon-button class="example-icon" aria-label="menu icon" (click)="irMylist();">
+				<mat-icon>arrow_back_ios</mat-icon>
 			</button>
       <span>Schedule</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon2" aria-label="Icono More horiz" (click)="irMylist();">
-        <mat-icon>more</mat-icon>
+      <button mat-icon-button class="example-icon2" aria-label="Icono Calendario" (click)="irMylist();">
+        <mat-icon>calendar_today</mat-icon>
       </button>
     </mat-toolbar-row>
 
     <mat-toolbar-row>
-      <span>Second Line</span>
+			<button mat-button class="boton-fecha">
+				4<br />
+				Tue
+			</button>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+			<span>Today List</span>
+			<span class="example-spacer"></span>
+      <span>8 Tasks</span>
     </mat-toolbar-row>
   </mat-toolbar>
 
+	<div class="contenedor">
+		<div class="fila">
+			<div class="col1">Time</div>
+			<div class="col2">&nbsp;</div>
+			<div class="col3 margen">Events</div>
+		</div>
+
+		<ng-container  *ngFor="let evento of miServicio.eventos; let i = index">
+		
+			<div class="fila">
+				<div class="col1">{{ evento.hora }}</div>
+				<div class="col2 timeline"><mat-icon *ngIf="evento.checked">adjust</mat-icon></div>
+				<div class="col3">
+					<mat-card class="carta" (click)="setChecked(i);">
+						<div class="fila">
+							<div class="titulo margen">{{ evento.titulo }}</div>
+							<div class="icono"><button mat-icon-button><mat-icon>{{ evento.icono }}</mat-icon></button></div>
+						</div>
+						<div class="fila">
+							<div class="texto margen">{{ evento.texto }}</div>
+							<div class="icono"><button mat-icon-button><mat-icon>more_vert</mat-icon></button></div>
+						</div>
+					</mat-card>
+				</div>
+			</div>
+		</ng-container>
+	</div>
+
+	<button mat-fab color="primary" (click)="irMylist();" class="fijo">
+		<mat-icon>add</mat-icon>
+	</button>

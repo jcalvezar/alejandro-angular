@@ -5,6 +5,8 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 
+import { ServicioService } from '../../services/servicio.service';
+
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
@@ -18,7 +20,7 @@ export class ScheduleComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private router: Router, private breakpointObserver: BreakpointObserver) {}
+  constructor(public miServicio: ServicioService, private router: Router, private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
   }
@@ -26,5 +28,11 @@ export class ScheduleComponent implements OnInit {
 	irMylist() {
 		this.router.navigateByUrl('/');
 	};
+	
+	setChecked(indice) {
+		for(var i=0; i < this.miServicio.eventos.length; i++) {
+			if (i == indice) this.miServicio.eventos[i].checked = true; else this.miServicio.eventos[i].checked = false;
+		}
+	}
 	
 }

@@ -52,13 +52,13 @@ export class ServicioService {
 	setEventos() {
 		this.eventos = [
 			{ hora: '08:00', icono: 'person', titulo: 'Morning Run in the Park', texto: 'Mon - Fri', checked: false },
-			{ hora: '10:00', icono: 'clipboard', titulo: 'Skype Meeteing with the NY Contractor', texto: 'Delivery Overview', checked: true },
-			{ hora: '11:00', icono: 'clipboard', titulo: 'Meeting with the Design team', texto: 'Timeline Q1 Visualization Project Objectives', checked: false },
-			{ hora: '12:00', icono: 'clipboard', titulo: 'Weekly Meeting with the Team', texto: 'On the List of Issues', checked: false },
+			{ hora: '10:00', icono: 'computer', titulo: 'Skype Meeteing with the NY Contractor', texto: 'Delivery Overview', checked: true },
+			{ hora: '11:00', icono: 'computer', titulo: 'Meeting with the Design team', texto: 'Timeline Q1 Visualization Project Objectives', checked: false },
+			{ hora: '12:00', icono: 'computer', titulo: 'Weekly Meeting with the Team', texto: 'On the List of Issues', checked: false },
 			{ hora: '16:00', icono: 'person', titulo: 'Morning Run in the Park', texto: 'Mon - Fri', checked: false },
-			{ hora: '17:00', icono: 'clipboard', titulo: 'Skype Meeteing with the NY Contractor', texto: 'Delivery Overview', checked: false },
-			{ hora: '18:00', icono: 'clipboard', titulo: 'Meeting with the Design team', texto: 'Timeline Q1 Visualization Project Objectives', checked: false },
-			{ hora: '20:00', icono: 'clipboard', titulo: 'Weekly Meeting with the Team', texto: 'On the List of Issues', checked: false }
+			{ hora: '17:00', icono: 'computer', titulo: 'Skype Meeteing with the NY Contractor', texto: 'Delivery Overview', checked: false },
+			{ hora: '18:00', icono: 'computer', titulo: 'Meeting with the Design team', texto: 'Timeline Q1 Visualization Project Objectives', checked: false },
+			{ hora: '20:00', icono: 'computer', titulo: 'Weekly Meeting with the Team', texto: 'On the List of Issues', checked: false }
 		];
 	}
 }

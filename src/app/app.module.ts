@@ -23,6 +23,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { SwiperModule } from 'swiper/angular';
+
 import { MylistComponent } from './components/mylist/mylist.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 
@@ -36,6 +38,7 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+		SwiperModule,
 		
     LayoutModule,
     MatToolbarModule,

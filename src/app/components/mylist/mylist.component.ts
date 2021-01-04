@@ -5,6 +5,8 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 
+import { ServicioService } from '../../services/servicio.service';
+
 @Component({
   selector: 'app-mylist',
   templateUrl: './mylist.component.html',
@@ -18,7 +20,7 @@ export class MylistComponent implements OnInit {
       shareReplay()
     );
 
-  constructor(private router: Router, private breakpointObserver: BreakpointObserver) {}
+  constructor(public miServicio: ServicioService, private router: Router, private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
   }

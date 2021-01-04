@@ -1,4 +1,4 @@
-<p>
+
   <mat-toolbar color="primary">
     <mat-toolbar-row>
 			<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
@@ -12,14 +12,40 @@
     </mat-toolbar-row>
 
     <mat-toolbar-row>
-      <span>Second Line</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+
+			<swiper [slidesPerView]="15" [spaceBetween]="10" >
+				<ng-container *ngFor="let fecha of miServicio.fechas; index as i">
+					<ng-template swiperSlide>
+						<button mat-button [color]="fecha.color" (click)="irSchedule();">
+							{{ fecha.nro }}<br />
+							{{ fecha.dia }}
+						</button>
+					</ng-template>
+				</ng-container>
+			</swiper>
+			
     </mat-toolbar-row>
   </mat-toolbar>
-</p>
+
+	<div class="jcontainer">
+		<div class="jitem" *ngFor="let carta of miServicio.cartas">
+			<mat-card text-center>
+				
+				<button mat-fab color="primary" (click)="irSchedule();" class="icono">
+					<mat-icon>{{ carta.icono }}</mat-icon>
+				</button>
+				
+				<mat-card-header >
+					{{ carta.titulo }}
+				</mat-card-header>
+				<mat-card-content class="pie">
+					<mat-icon>alarm</mat-icon>&nbsp;
+					{{ carta.cantidad }} items.
+				</mat-card-content>
+			</mat-card>
+		</div>
+  </div>
+
+	<button mat-fab color="primary" (click)="irSchedule();" class="fijo">
+		<mat-icon>add</mat-icon>
+	</button>

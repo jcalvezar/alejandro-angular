@@ -45,8 +45,8 @@ proximamente como instalar Node, Angular, MaterialUI & Swiper
 ## Construido con 🛠️
 
 Notepad++  
-Angular v11
-MaterialUI v11
+Angular v11  
+MaterialUI v11  
 Swiper  
 NodeJS  
 NPM  
